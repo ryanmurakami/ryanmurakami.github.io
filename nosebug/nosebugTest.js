@@ -5,7 +5,7 @@ function assertTag(tagName) {
 		return false;
 }	
 
-setTimeout(function() {
+document.addEventListener('nosebug', function() {
 	if(assertTag('testOne') &&
 		assertTag('testTwo') &&
 		assertTag('testThree'))
@@ -13,4 +13,4 @@ setTimeout(function() {
 		document.getElementById('testSuccess').style.display = '';
 	else
 		document.write('You dun goofed');
-}, 3000);
+});
