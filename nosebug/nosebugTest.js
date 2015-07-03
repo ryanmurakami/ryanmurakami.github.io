@@ -8,8 +8,8 @@ function assertTag(tagName) {
 document.addEventListener('nosebug', function() {
 	if(assertTag('testOne') &&
 		assertTag('testTwo') &&
-		assertTag('testThree'))
-		//document.write('All tests passed');
+		assertTag('testThree') &&
+		window.nosebug.ready)
 		document.getElementById('testSuccess').style.display = '';
 	else
 		document.write('You dun goofed');
